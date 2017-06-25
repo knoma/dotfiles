@@ -106,6 +106,11 @@ brew install maven git gradle
 brew install the_silver_searcher
 brew install python
 
+brew install zsh-autosuggestions
+brew install zsh-history-substring-search
+brew install zsh-syntax-highlighting
+brew install zsh-completions
+
 # pyton
 pip install Pygments
 
@@ -117,3 +122,9 @@ brew cask install java
 
 # Remove outdated versions from the cellar.
 brew cleanup
+
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+echo "source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/.zshrc
+echo "source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh" >> ~/.zshrc
+echo "source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc
+echo "fpath=(/usr/local/share/zsh-completions $fpath)" >> ~/.zshrc
